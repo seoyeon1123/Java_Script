@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h1>나의 todo list</h1>
+<p>1. 오늘 저녁에 운동을 다녀올 예정이다.
+    <button type="button">삭제</button>
+</p>
+<p>2. 집에 와서 닭가슴살을 먹겠다.
+    <button type="button">삭제</button>
+</p>
+<p>3. 자기 전에 반드시 복습을 하고 잘 것이다.
+    <button type="button">삭제</button>
+</p>
+
+<script>
+    const txts = document.querySelectorAll('p');
+    txts.forEach((item)=>{
+       item.addEventListener('click', (event)=>{
+           alert(event.target.childNodes[0].data);
+       });
+    });
+
+    const btns = document.querySelectorAll('button')
+    btns.forEach((item)=>{
+        item.addEventListener('click',(event)=>{
+
+            const reset= confirm('삭제하시겠습니까?')
+            event.stopPropagation();
+            if(reset){
+                event.target.parentElement.remove();
+            }
+
+        })
+    })
+</script>
+</body>
+</html>
