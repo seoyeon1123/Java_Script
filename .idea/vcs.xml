@@ -4,5 +4,7 @@
     <mapping directory="$PROJECT_DIR$/../../" vcs="Git" />
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/HTML" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/hodu-project" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/java-start" vcs="Git" />
   </component>
 </project>
